@@ -67,4 +67,12 @@ public class LinkedList<T> {
             newNode = newNode.next;
         }
     }
+    //delete first
+    public void popFirst(){
+        if(head==null){
+            System.out.println("The list is empty");
+            return;
+        }
+        head = head.next;
+    }
 }

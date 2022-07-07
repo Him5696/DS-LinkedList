@@ -15,5 +15,8 @@ public class DataStructure {
         linkedList.addLast(70);
         linkedList.insertInBetween(56, 70, 30);
         linkedList.print();
+        System.out.println();
+        linkedList.popFirst();
+        linkedList.print();
     }
 }
