@@ -5,12 +5,12 @@ public class LinkedList<T> {
     Node<T> tail;
 
     public void push(T data) {
-        Node<T> newnode = new Node<>(data);
-        if (newnode == null) {
-            newnode = tail;
+        Node<T> newNode = new Node<>(data);
+        if (newNode == null) {
+            newNode = tail;
         } else {
-            newnode.next = head;
-            head = newnode;
+            newNode.next = head;
+            head = newNode;
         }
     }
     public void addFirst(T data) {
@@ -22,6 +22,21 @@ public class LinkedList<T> {
         newNode.next = head;
         head = newNode;
     }
+    public void addLast(T data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            Node currNode = head;
+            head = newNode;
+            return;
+        }
+        Node currNode = head;
+        while (currNode.next != null) {
+            currNode = currNode.next;
+        }
+
+        currNode.next = newNode;
+
+    }
     public void appendingNode(T before, T data) {
         Node newNode = head;
         while (newNode.data != before) {
@@ -31,6 +46,15 @@ public class LinkedList<T> {
         node.next =  newNode.next;
         newNode.next = node;
 
+    }
+    public void insertInBetween(T before, T after, T data) {
+        Node currentNode = head;
+        while (currentNode.data != before && currentNode.data != after) {
+            currentNode = currentNode.next;
+        }
+        Node node = new Node(data);
+        node.next = currentNode.next;
+        currentNode.next = node;
     }
     public void print() {
         if (head == null) {

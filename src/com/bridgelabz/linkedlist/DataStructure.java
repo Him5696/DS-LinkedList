@@ -12,8 +12,8 @@ public class DataStructure {
 
         LinkedList linkedList = new LinkedList();
         linkedList.addFirst(56);
-        linkedList.appendingNode(56, 30);
-        linkedList.appendingNode(30, 70);
+        linkedList.addLast(70);
+        linkedList.insertInBetween(56, 70, 30);
         linkedList.print();
     }
 }
