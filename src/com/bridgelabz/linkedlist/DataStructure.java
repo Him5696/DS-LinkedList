@@ -15,7 +15,10 @@ public class DataStructure {
         linkedList.addLast(70);
         linkedList.insertInBetween(56, 70, 30);
         linkedList.print();
-        System.out.println();
+        System.out.println("\nFinding Element Present or not");
         linkedList.findNode(30);
+        System.out.println("Element Added after node 30 in the list");
+        linkedList.appendingNode(30, 40);
+        linkedList.print();
     }
 }
