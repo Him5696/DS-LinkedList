@@ -22,6 +22,16 @@ public class LinkedList<T> {
         newNode.next = head;
         head = newNode;
     }
+    public void appendingNode(T before, T data) {
+        Node newNode = head;
+        while (newNode.data != before) {
+            newNode =  newNode.next;
+        }
+        Node node = new Node(data);
+        node.next =  newNode.next;
+        newNode.next = node;
+
+    }
     public void print() {
         if (head == null) {
             System.out.println("list is empty");

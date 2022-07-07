@@ -11,9 +11,9 @@ public class DataStructure {
         System.out.println();
 
         LinkedList linkedList = new LinkedList();
-        linkedList.addFirst(70);
-        linkedList.addFirst(30);
         linkedList.addFirst(56);
+        linkedList.appendingNode(56, 30);
+        linkedList.appendingNode(30, 70);
         linkedList.print();
     }
 }
