@@ -101,4 +101,24 @@ public class LinkedList<T> {
             currentNode = currentNode.next;
         }
     }
+    public void deleteAnyNode(T data) {
+        Node currentNode = head, previousNode = head;
+        while (currentNode != null) {
+            if (currentNode.data == data) {
+                previousNode.next = currentNode.next;
+            }
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+    }
+
+    public int size() {
+        Node temp = head;
+        int count = 0;
+        while (temp != null){
+            temp = temp.next;
+            count++;
+        }
+        return count;
+    }
 }

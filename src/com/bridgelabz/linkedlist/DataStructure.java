@@ -20,5 +20,9 @@ public class DataStructure {
         System.out.println("Element Added after node 30 in the list");
         linkedList.appendingNode(30, 40);
         linkedList.print();
+        System.out.println("\nElement 40 deleted from list");
+        linkedList.deleteAnyNode(40);
+        linkedList.print();
+        System.out.println("\nsize of linkedList is: " + linkedList.size());
     }
 }
